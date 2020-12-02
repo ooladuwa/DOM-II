@@ -8,29 +8,33 @@ const head = document.querySelector('.logo-heading')
         head.style.color = 'black'
     });
 
+    // * 'mouseover / mouseout 
+const img = document.querySelector('img')
+    img.addEventListener('mouseover', (event) => {
+        img.style.border = '2px dotted blue'
+    });
+    img.addEventListener('mouseout', (event) => {
+        img.style.border = 'none'
+    })
+
+    // * 'dblclick'
+let signUpButton = document.querySelectorAll('.btn');
+signUpButton.forEach(button => {
+    button.addEventListener('dblclick', (event) => {     
+        alert("You're ready to ride the bus!")
+})
+});
 
 // * 'click'
-const links = document.querySelectorAll('nav a')
-    links.addEventListener('click', () => {
-        links.style.color = 'purple'
-        // links.classList.add('sky');
+let link = document.querySelectorAll('a')
+    link.forEach(link => {
+        link.addEventListener('click', (event) => {
+            link.style.color = 'purple'
+    })
+    }); 
+ // links.classList.add('sky');
         // links.classList.remove('sky');
         // setInterval(() => links.classList.toggle('sky'), 1000)
-    }); 
-
-
-// * 'mouseenter  
-const busImg = document.querySelector('header img')
-    busImg.addEventListener('mouseenter', (event) => {
-        busImg.style.border = '2px dotted blue'
-    });
-    
-// * 'click
-let signUpButton = document.querySelectorAll('.btn');
-    signUpButton.addEventListener('dblclick', (event) => {     
- // signUpButton.style.backgroundColor = 'blue'
-        alert("You're ready to ride the bus!")
-    })
     
 //   * `keydown`
 
@@ -51,9 +55,6 @@ let signUpButton = document.querySelectorAll('.btn');
 
 
 //   * `select`
-
-
-//   * `dblclick`
 
 
 //   * `drag / drop`
