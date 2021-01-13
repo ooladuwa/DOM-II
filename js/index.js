@@ -1,40 +1,66 @@
 // Your code goes here
 // * `mouseenter / mouseleave`
 const head = document.querySelector('.logo-heading')
-    head.addEventListener('mouseenter', (event) => {
+    head.addEventListener('mouseenter', () => {
         head.style.color = 'dodgerBlue';
     });
-    head.addEventListener('mouseleave', (event) => {
+    head.addEventListener('mouseleave', () => {
         head.style.color = 'black'
     });
 
     // * 'mouseover / mouseout 
-const img = document.querySelector('img')
-    img.addEventListener('mouseover', (event) => {
-        img.style.border = '2px dotted blue'
-    });
-    img.addEventListener('mouseout', (event) => {
-        img.style.border = 'none'
+const img = document.querySelectorAll('img')
+    img.forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.style.border = '2rem solid white'
     })
+    });
 
-    // * 'dblclick'
-let signUpButton = document.querySelectorAll('.btn');
-signUpButton.forEach(button => {
-    button.addEventListener('dblclick', (event) => {     
-        alert("You're ready to ride the bus!")
+    img.forEach(item => {
+        item.addEventListener('mouseout', () => {
+            item.style.border = 'none'
+    })
+    });
+
+   // 'dblclick'
+let destination = document.querySelectorAll('.btn');
+let newDestination = Array.from(destination)
+newDestination.forEach(item => {
+    item.addEventListener('dblclick', () => {
+       alert("ride the bus!")
+    })
 })
-});
+
 
 // * 'click'
 let link = document.querySelectorAll('a')
     link.forEach(link => {
-        link.addEventListener('click', (event) => {
+        link.addEventListener('click', () => {
             link.style.color = 'purple'
     })
     }); 
- // links.classList.add('sky');
-        // links.classList.remove('sky');
-        // setInterval(() => links.classList.toggle('sky'), 1000)
+    
+    const headings = document.querySelectorAll("h2") 
+
+        headings.forEach(heading => {
+            heading.addEventListener("keydown", (event) => {
+                if (event.key === "O"){
+                document.style.color = "orange"
+                }
+            })
+        })
+
+
+      
+
+
+    let header = document.querySelector('header')
+        header.addEventListener('mouseover', () => {
+            header.classList.add('dodgerblue');
+            header.classList.remove('dodgerblue');
+            setInterval(() => header.classList.toggle('dodgerblue'), 1000)
+        })
+        
     
 //   * `keydown`
 
