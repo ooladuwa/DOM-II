@@ -43,10 +43,8 @@ let link = document.querySelectorAll('a')
     const headings = document.querySelectorAll("h2") 
 
         headings.forEach(heading => {
-            heading.addEventListener("keydown", (event) => {
-                if (event.key === "O"){
-                document.style.color = "orange"
-                }
+            heading.addEventListener("mousemove", (event) => {
+                heading.style.color = "orange"
             })
         })
 
